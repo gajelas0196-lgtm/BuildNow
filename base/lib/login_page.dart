@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage>
     if (savedUser != null && savedPass != null && savedKey != null) {
       // Cek ke server apakah session masih valid
       final uri = Uri.parse(
-          "http://capekkenaoanyak.onlinepanel.my.id:2002/myInfo?username=$savedUser&password=$savedPass&androidId=$androidId&key=$savedKey");
+          "https://link.thelocalrent.com/myInfo?username=$savedUser&password=$savedPass&androidId=$androidId&key=$savedKey");
 
       try {
         final res = await http.get(uri);
@@ -163,7 +163,7 @@ class _LoginPageState extends State<LoginPage>
 
     try {
       final validate = await http.post(
-        Uri.parse("http://capekkenaoanyak.onlinepanel.my.id:2002/validate"),
+        Uri.parse("https://link.thelocalrent.com/validate"),
         body: {
           "username": username,
           "password": password,

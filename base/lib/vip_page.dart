@@ -75,7 +75,7 @@ class _VipPageState extends State<VipPage> {
     setState(() => isLoading = true);
     try {
       final res = await http.get(
-        Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/listUsers?key=$sessionKey'),
+        Uri.parse('https://link.thelocalrent.com/listUsers?key=$sessionKey'),
       );
       final data = jsonDecode(res.body);
       if (data['valid'] == true && data['authorized'] == true) {
@@ -125,7 +125,7 @@ class _VipPageState extends State<VipPage> {
     setState(() => isLoading = true);
     try {
       final res = await http.get(
-        Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/deleteUser?key=$sessionKey&username=$username'),
+        Uri.parse('https://link.thelocalrent.com/deleteUser?key=$sessionKey&username=$username'),
       );
       final data = jsonDecode(res.body);
 
@@ -160,7 +160,7 @@ class _VipPageState extends State<VipPage> {
     setState(() => isLoading = true);
     try {
       final url = Uri.parse(
-        'http://capekkenaoanyak.onlinepanel.my.id:2002/userAdd?key=$sessionKey&username=$u&password=$p&day=$d&role=$newUserRole',
+        'https://link.thelocalrent.com/userAdd?key=$sessionKey&username=$u&password=$p&day=$d&role=$newUserRole',
       );
       final res = await http.get(url);
       final data = jsonDecode(res.body);
@@ -198,7 +198,7 @@ class _VipPageState extends State<VipPage> {
     setState(() => isLoading = true);
     try {
       final url = Uri.parse(
-        'http://capekkenaoanyak.onlinepanel.my.id:2002/editUser?key=$sessionKey&username=$u&addDays=$d',
+        'https://link.thelocalrent.com/editUser?key=$sessionKey&username=$u&addDays=$d',
       );
       final res = await http.get(url);
       final data = jsonDecode(res.body);

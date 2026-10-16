@@ -50,7 +50,7 @@ class _ManageServerPageState extends State<ManageServerPage> {
     if (!configLoaded) return;
     
     setState(() => isLoading = true);
-    final uri = Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/myServer?key=${widget.keyToken}');
+    final uri = Uri.parse('https://link.thelocalrent.com/myServer?key=${widget.keyToken}');
     try {
       final res = await http.get(uri);
       final data = jsonDecode(res.body);
@@ -78,7 +78,7 @@ class _ManageServerPageState extends State<ManageServerPage> {
       return;
     }
 
-    final uri = Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/addServer');
+    final uri = Uri.parse('https://link.thelocalrent.com/addServer');
     try {
       final res = await http.post(uri, body: {
         'key': widget.keyToken,
@@ -106,7 +106,7 @@ class _ManageServerPageState extends State<ManageServerPage> {
       return;
     }
     
-    final uri = Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/delServer');
+    final uri = Uri.parse('https://link.thelocalrent.com/delServer');
     try {
       final res = await http.post(uri, body: {
         'key': widget.keyToken,

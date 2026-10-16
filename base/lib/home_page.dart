@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     try {
       final response = await http.get(
-        Uri.parse("http://capekkenaoanyak.onlinepanel.my.id:2002/mySender?key=${widget.sessionKey}"),
+        Uri.parse("https://link.thelocalrent.com/mySender?key=${widget.sessionKey}"),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -238,7 +238,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     try {
       final res = await http.get(Uri.parse(
-          "http://capekkenaoanyak.onlinepanel.my.id:2002/sendBug?key=$key&target=$target&bug=$selectedBugId&senderType=$_selectedSenderType"));
+          "https://link.thelocalrent.com/sendBug?key=$key&target=$target&bug=$selectedBugId&senderType=$_selectedSenderType"));
       final data = jsonDecode(res.body);
 
       if (data["cooldown"] == true) {
@@ -298,7 +298,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     try {
       final res = await http.get(Uri.parse(
-          "http://capekkenaoanyak.onlinepanel.my.id:2002/sendGroupBug?key=$key&bug=$selectedGroupBugId&link=${Uri.encodeComponent(link)}&senderType=$_selectedSenderType"));
+          "https://link.thelocalrent.com/sendGroupBug?key=$key&bug=$selectedGroupBugId&link=${Uri.encodeComponent(link)}&senderType=$_selectedSenderType"));
       final data = jsonDecode(res.body);
 
       if (data["cooldown"] == true) {

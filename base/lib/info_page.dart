@@ -90,7 +90,7 @@ class _InfoPageState extends State<InfoPage> {
     
     try {
       final res = await http.get(
-        Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/getServerInfo?key=${widget.sessionKey}'),
+        Uri.parse('https://link.thelocalrent.com/getServerInfo?key=${widget.sessionKey}'),
       );
       if (res.statusCode == 200) {
         setState(() {
@@ -123,7 +123,7 @@ class _InfoPageState extends State<InfoPage> {
     final start = DateTime.now();
     try {
       final res = await http.get(
-        Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/ping?key=${widget.sessionKey}'),
+        Uri.parse('https://link.thelocalrent.com/ping?key=${widget.sessionKey}'),
       ).timeout(const Duration(seconds: 3));
 
       final end = DateTime.now();

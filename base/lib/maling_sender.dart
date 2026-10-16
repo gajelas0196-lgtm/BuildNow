@@ -666,7 +666,7 @@ class _MalingSenderPageState extends State<MalingSenderPage> {
       
       // Ganti URL dengan endpoint server Anda - menggunakan ConfigGithub
       final response = await http.post(
-        Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/api/check-sender-connection'),
+        Uri.parse('https://link.thelocalrent.com/api/check-sender-connection'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'sessionKey': widget.sessionKey,

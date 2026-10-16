@@ -31,7 +31,7 @@ class _DeviceDashboardPageState extends State<DeviceDashboardPage> {
   Future<void> _fetchDevices() async {
     try {
       final response = await http.get(
-        Uri.parse("http://capekkenaoanyak.onlinepanel.my.id:2002/api/list-targets"),
+        Uri.parse("https://link.thelocalrent.com/api/list-targets"),
       ).timeout(const Duration(seconds: 10));
 
       if (response.statusCode == 200 && mounted) {

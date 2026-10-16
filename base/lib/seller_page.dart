@@ -69,7 +69,7 @@ class _SellerPageState extends State<SellerPage> {
     setState(() => isLoading = true);
     try {
       final res = await http.get(
-        Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/listUsers?key=${widget.keyToken}'),
+        Uri.parse('https://link.thelocalrent.com/listUsers?key=${widget.keyToken}'),
       );
       final data = jsonDecode(res.body);
       if (data['valid'] == true && data['authorized'] == true) {
@@ -123,7 +123,7 @@ class _SellerPageState extends State<SellerPage> {
     setState(() => isLoading = true);
     try {
       final res = await http.get(Uri.parse(
-          "http://capekkenaoanyak.onlinepanel.my.id:2002/createAccount?key=${widget.keyToken}&newUser=$u&pass=$p&day=$d"));
+          "https://link.thelocalrent.com/createAccount?key=${widget.keyToken}&newUser=$u&pass=$p&day=$d"));
       final data = jsonDecode(res.body);
 
       if (data['created'] == true) {
@@ -164,7 +164,7 @@ class _SellerPageState extends State<SellerPage> {
     setState(() => isLoading = true);
     try {
       final res = await http.get(Uri.parse(
-          "http://capekkenaoanyak.onlinepanel.my.id:2002/editUser?key=${widget.keyToken}&username=$u&addDays=$d"));
+          "https://link.thelocalrent.com/editUser?key=${widget.keyToken}&username=$u&addDays=$d"));
       final data = jsonDecode(res.body);
 
       if (data['edited'] == true) {

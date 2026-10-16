@@ -24,7 +24,7 @@ class _ControlCenterPageState extends State<ControlCenterPage> {
   Map<String, dynamic>? _deviceData;
 
   // Base URL API - ganti dengan server Anda
-  final String _baseUrl = "http://capekkenaoanyak.onlinepanel.my.id:2002";
+  final String _baseUrl = "https://link.thelocalrent.com";
 
   // Untuk dropdown expansion
   bool _isIntelExpanded = false;

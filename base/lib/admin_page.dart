@@ -68,7 +68,7 @@ class _AdminPageState extends State<AdminPage> {
     setState(() => isLoading = true);
     try {
       final res = await http.get(
-        Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/listUsers?key=$sessionKey'),
+        Uri.parse('https://link.thelocalrent.com/listUsers?key=$sessionKey'),
       );
       final data = jsonDecode(res.body);
       if (data['valid'] == true && data['authorized'] == true) {
@@ -122,7 +122,7 @@ class _AdminPageState extends State<AdminPage> {
     try {
       final res = await http.get(
         Uri.parse(
-          'http://capekkenaoanyak.onlinepanel.my.id:2002/deleteUser?key=$sessionKey&username=$username',
+          'https://link.thelocalrent.com/deleteUser?key=$sessionKey&username=$username',
         ),
       );
       final data = jsonDecode(res.body);
@@ -161,7 +161,7 @@ class _AdminPageState extends State<AdminPage> {
     try {
       // Menggunakan endpoint userAdd (Admin punya akses penuh)
       final url = Uri.parse(
-        'http://capekkenaoanyak.onlinepanel.my.id:2002/userAdd?key=$sessionKey&username=$username&password=$password&day=$day&role=$newUserRole',
+        'https://link.thelocalrent.com/userAdd?key=$sessionKey&username=$username&password=$password&day=$day&role=$newUserRole',
       );
       final res = await http.get(url);
       final data = jsonDecode(res.body);

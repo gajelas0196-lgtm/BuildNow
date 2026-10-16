@@ -99,7 +99,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
 
     try {
       final res = await http.post(
-        Uri.parse("http://capekkenaoanyak.onlinepanel.my.id:2002/changepass"),
+        Uri.parse("https://link.thelocalrent.com/changepass"),
         body: {
           "username": widget.username,
           "oldPass": oldPass,

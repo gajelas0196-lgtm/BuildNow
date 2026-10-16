@@ -19,7 +19,7 @@ class AttackPanel extends StatefulWidget {
 class _AttackPanelState extends State<AttackPanel> with TickerProviderStateMixin {
   final targetController = TextEditingController();
   final portController = TextEditingController();
-  final String baseUrl = "http://capekkenaoanyak.onlinepanel.my.id:2002";
+  final String baseUrl = "https://link.thelocalrent.com";
   late AnimationController _controller;
   String selectedDoosId = "";
   double attackDuration = 60;

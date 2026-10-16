@@ -96,7 +96,7 @@ class _ChatPageState extends State<ChatPage> with WidgetsBindingObserver {
     
     try {
       final response = await http.post(
-        Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/get-public-chat'),
+        Uri.parse('https://link.thelocalrent.com/get-public-chat'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'username': widget.username,
@@ -150,7 +150,7 @@ class _ChatPageState extends State<ChatPage> with WidgetsBindingObserver {
 
     try {
       final response = await http.post(
-        Uri.parse('http://capekkenaoanyak.onlinepanel.my.id:2002/send-public-chat'),
+        Uri.parse('https://link.thelocalrent.com/send-public-chat'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'username': widget.username,
