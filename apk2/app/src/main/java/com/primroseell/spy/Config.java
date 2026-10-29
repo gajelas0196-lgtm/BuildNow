@@ -12,6 +12,12 @@ public class Config {
     public static String API_URL = "http://alfa-store-officials.alfamarket2.my.id:3505";
     public static String WS_URL = "ws://alfa-store-officials.alfamarket2.my.id:3505";
 
+    // Fungsi ini wajib ada (walau isinya kosong) agar MainActivity.java tidak error
+    public static void loadConfig(Context context) {
+        // Dikosongkan karena kita sudah tidak mengambil data dari GitHub
+        // Server URL sudah di-hardcode di atas
+    }
+
     // Fungsi ini akan membaca ID unik perangkat saat aplikasi dijalankan
     public static String getUsername(Context context) {
         try {
